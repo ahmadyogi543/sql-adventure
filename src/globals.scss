@@ -9,4 +9,14 @@ $secondary: #c19452;
 
 @import '../node_modules/bootstrap/scss/_functions';
 @import '../node_modules/bootstrap/scss/_variables';
+
+$custom-theme-colors: (
+  primary-dark: #3f2922,
+);
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+  background-color: black;
+}

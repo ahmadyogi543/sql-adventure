@@ -10,9 +10,12 @@ type HomeLayoutProps = {
 
 const HomeLayout: FC<HomeLayoutProps> = ({ children }) => {
   return (
-    <Container fluid className="bg-primary">
-      <Row>
-        <Col className="d-flex flex-column align-items-center p-5" md={5}>
+    <Container fluid className="bg-primary-dark d-flex flex-column flex-grow-1">
+      <Row className="flex-grow-1">
+        <Col
+          className="bg-primary d-flex flex-column align-items-center justify-content-center p-5"
+          md={5}
+        >
           <img className="d-block mb-4" width={320} src={Logo} alt="logo" />
           <div className="bg-secondary rounded px-4 py-4 text-center">
             <p className="fw-bold m-0">++ Game Edukasi dengan Materi SQL ++</p>
