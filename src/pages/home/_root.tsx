@@ -1,5 +1,11 @@
+import HomeLayout from '../../layouts/HomeLayout';
+
 const HomeRootPage = () => {
-  return <div>HomeRootPage</div>;
+  return (
+    <HomeLayout>
+      <div>HomeRootPage</div>
+    </HomeLayout>
+  );
 };
 
 export default HomeRootPage;
