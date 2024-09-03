@@ -17,6 +17,21 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
-body {
-  background-color: black;
+// utils
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row-grow {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.flex-column-grow {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }

@@ -10,9 +10,9 @@ type MenuButtonProps = {
 const MenuButton: FC<MenuButtonProps> = ({ icon, title, onClick }) => {
   return (
     <Card bg="primary" className="text-secondary flex-grow-1 py-2">
-      <Card.Body className="mx-auto d-flex flex-column align-items-center justify-content-center">
+      <Card.Body className="mx-auto flex-center flex-column">
         <div
-          className="bg-secondary text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
+          className="bg-secondary text-primary rounded-circle flex-center mx-auto mb-4"
           style={{
             width: 96,
             height: 96,
