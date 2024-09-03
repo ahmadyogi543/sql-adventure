@@ -12,8 +12,8 @@ export const routes: RouteObject[] = [
     element: <AdminRootPage />,
     children: [
       {
-        path: 'dashboard',
         element: <AdminDashboardPage />,
+        index: true,
       },
       {
         path: 'users',
