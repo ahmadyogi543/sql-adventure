@@ -6,6 +6,11 @@ $font-family-sans-serif: Ubuntu, system-ui, -apple-system, 'Segoe UI', Roboto,
 // colors
 $primary: #4f342b;
 $secondary: #c19452;
+$success: #3b7f52;
+$info: #2b6f82;
+$danger: #9e2b2b;
+$light: #f5e9da;
+$dark: #3b2b28;
 
 @import '../node_modules/bootstrap/scss/_functions';
 @import '../node_modules/bootstrap/scss/_variables';
