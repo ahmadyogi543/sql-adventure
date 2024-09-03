@@ -1,5 +1,11 @@
+import AdminLayout from '../../layouts/AdminLayout';
+
 const AdminProgressPage = () => {
-  return <div>AdminProgressPage</div>;
+  return (
+    <AdminLayout title="PROGRESS">
+      <div>AdminProgressPage</div>
+    </AdminLayout>
+  );
 };
 
 export default AdminProgressPage;

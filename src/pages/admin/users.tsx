@@ -1,5 +1,11 @@
+import AdminLayout from '../../layouts/AdminLayout';
+
 const AdminUsersPage = () => {
-  return <div>AdminUsersPage</div>;
+  return (
+    <AdminLayout title="PENGGUNA">
+      <div>AdminUsersPage</div>
+    </AdminLayout>
+  );
 };
 
 export default AdminUsersPage;
