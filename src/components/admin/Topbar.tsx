@@ -11,7 +11,7 @@ const Topbar = () => {
         <Navbar.Brand as={Link} className="text-primary fw-bold" to="/">
           SQL Adventure
         </Navbar.Brand>
-        <Button className="flex-center" variant="outline-danger">
+        <Button className="flex-center" size="sm" variant="outline-danger">
           <MdLogout size={24} />
         </Button>
       </Container>
