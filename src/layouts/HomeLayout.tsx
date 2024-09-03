@@ -17,14 +17,16 @@ const HomeLayout: FC<HomeLayoutProps> = ({ children }) => {
           md={5}
         >
           <img className="d-block mb-4" width={320} src={Logo} alt="logo" />
-          <div className="bg-secondary rounded px-4 py-4 text-center">
+          <div className="bg-secondary rounded px-4 py-4 text-center text-primary">
             <p className="fw-bold m-0">++ Game Edukasi dengan Materi SQL ++</p>
             <p className="small m-0">
               Berkonteks Lingkungan Lahan Basah Kalimantan Selatan
             </p>
           </div>
         </Col>
-        <Col className="bg-secondary p-5">{children}</Col>
+        <Col className="d-flex flex-column bg-secondary text-primary p-5">
+          {children}
+        </Col>
       </Row>
       <Footer />
     </Container>
