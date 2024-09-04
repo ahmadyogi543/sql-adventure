@@ -3,6 +3,7 @@ import {
   MdBarChart,
   MdDashboard,
   MdGroup,
+  MdLogout,
   MdMoving,
   MdSettings,
 } from 'react-icons/md';
@@ -45,6 +46,8 @@ const MenuItemList = () => {
         icon={<MdSettings size={22} />}
         title="Pengaturan"
       />
+
+      <MenuItem href="/" icon={<MdLogout size={22} />} title="KELUAR" />
     </ListGroup>
   );
 };
