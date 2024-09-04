@@ -32,7 +32,7 @@ const headers: TableColumnType<User>[] = [
   { title: 'Nama', prop: 'name', isFilterable: true },
   { title: 'Institusi', prop: 'institution', isFilterable: true },
   {
-    title: 'Status Selesai',
+    title: 'Status',
     prop: 'done',
     cell: (row) => (
       <Badge bg={row.done ? 'success' : 'danger'}>
@@ -61,7 +61,7 @@ const ActionButtonGroup = () => {
       <Button title="Edit" size="sm" variant="outline-primary">
         <FaEdit />
       </Button>
-      <Button title="Hapus" size="sm" variant="outline-danger">
+      <Button title="Hapus" size="sm" variant="outline-primary">
         <FaTrashCan />
       </Button>
     </ButtonGroup>

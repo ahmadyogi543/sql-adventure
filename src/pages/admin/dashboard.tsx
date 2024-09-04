@@ -65,7 +65,7 @@ const AdminDashboardPage = () => {
         <Col>
           <DashboardCard
             icon={<FaChartPie size={28} />}
-            title="PROGRESS PENYELESAIAN"
+            title="STATUS PENGGUNA"
             subtitle="20/35 SELESAI"
             variant="warning"
           />

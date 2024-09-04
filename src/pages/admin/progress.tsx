@@ -32,7 +32,7 @@ const headers: TableColumnType<User>[] = [
   { title: 'Nama', prop: 'name', isFilterable: true },
   { title: 'Institusi', prop: 'institution', isFilterable: true },
   {
-    title: 'Progress Penyelesaian',
+    title: 'Progress Pengguna',
     prop: 'progress',
     cell: (row) => <UserProgressBar progress={row.progress} />,
   },
@@ -40,7 +40,7 @@ const headers: TableColumnType<User>[] = [
     title: 'Aksi',
     prop: 'action',
     cell: () => (
-      <Button size="sm" title="Reset" variant="outline-danger">
+      <Button size="sm" title="Reset" variant="outline-primary">
         <TbReload />
       </Button>
     ),
