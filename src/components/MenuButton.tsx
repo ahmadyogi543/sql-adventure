@@ -1,13 +1,14 @@
 import { FC, ReactNode } from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 type MenuButtonProps = {
+  href: string;
   icon: ReactNode;
   title: string;
-  onClick?: () => void;
 };
 
-const MenuButton: FC<MenuButtonProps> = ({ icon, title, onClick }) => {
+const MenuButton: FC<MenuButtonProps> = ({ href, icon, title }) => {
   return (
     <Card bg="primary" className="text-secondary flex-grow-1 py-2">
       <Card.Body className="mx-auto flex-center flex-column">
@@ -20,11 +21,13 @@ const MenuButton: FC<MenuButtonProps> = ({ icon, title, onClick }) => {
         >
           {icon}
         </div>
-        <Button className="px-4" onClick={onClick} variant="secondary">
-          <span className="small fw-bold text-primary">
-            {title.toUpperCase()}
-          </span>
-        </Button>
+        <Link to={href}>
+          <Button className="px-4" variant="secondary">
+            <span className="small fw-bold text-primary">
+              {title.toUpperCase()}
+            </span>
+          </Button>
+        </Link>
       </Card.Body>
     </Card>
   );
