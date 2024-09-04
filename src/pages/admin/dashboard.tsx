@@ -54,7 +54,7 @@ const AdminDashboardPage = () => {
   return (
     <AdminLayout title="DASHBOARD">
       <Row className="g-3 mb-3">
-        <Col>
+        <Col md={6}>
           <DashboardCard
             icon={<FaUsers size={28} />}
             title="JUMLAH PENGGUNA"
@@ -72,7 +72,7 @@ const AdminDashboardPage = () => {
         </Col>
       </Row>
       <Row className="g-3">
-        <Col>
+        <Col md={4}>
           <DashboardCard2 title="SKOR RATA-RATA" variant="info text-white">
             <DashboardCard2Content />
           </DashboardCard2>
