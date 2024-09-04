@@ -17,6 +17,7 @@ const HomeRootPage = () => {
         <Row className="mb-2 d-flex flex-column flex-grow-1">
           <Col className="d-flex flex-column flex-grow-1">
             <MenuButton
+              href="/gameplay"
               icon={
                 <IoLogoGameControllerA
                   className="m-0"
@@ -30,18 +31,21 @@ const HomeRootPage = () => {
         <Row className="g-2">
           <Col md={4}>
             <MenuButton
+              href="/learn"
               icon={<IoIosJournal className="m-0" style={{ fontSize: 48 }} />}
               title="Belajar"
             />
           </Col>
           <Col md={4}>
             <MenuButton
+              href="/settings"
               icon={<IoMdSettings className="m-0" style={{ fontSize: 48 }} />}
               title="Pengaturan"
             />
           </Col>
           <Col md={4}>
             <MenuButton
+              href="/leaderboard"
               icon={<IoIosListBox className="m-0" style={{ fontSize: 42 }} />}
               title="Leaderboard"
             />
