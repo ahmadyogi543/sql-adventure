@@ -58,10 +58,10 @@ const AdminUsersPage = () => {
 const ActionButtonGroup = () => {
   return (
     <ButtonGroup>
-      <Button variant="outline-primary">
+      <Button title="Edit" size="sm" variant="outline-primary">
         <FaEdit />
       </Button>
-      <Button variant="outline-danger">
+      <Button title="Hapus" size="sm" variant="outline-danger">
         <FaTrashCan />
       </Button>
     </ButtonGroup>
