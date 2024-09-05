@@ -1,5 +1,4 @@
 import { FC, ReactNode } from 'react';
-import Footer from '../components/Footer';
 
 type AdminLayout = {
   children: ReactNode;
@@ -15,7 +14,6 @@ const AdminLayout: FC<AdminLayout> = ({ children, title }) => {
         </div>
         {children}
       </div>
-      <Footer />
     </>
   );
 };

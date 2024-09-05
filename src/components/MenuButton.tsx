@@ -23,9 +23,7 @@ const MenuButton: FC<MenuButtonProps> = ({ href, icon, title }) => {
         </div>
         <Link to={href}>
           <Button className="px-4" variant="secondary">
-            <span className="small fw-bold text-primary">
-              {title.toUpperCase()}
-            </span>
+            <span className="small">{title.toUpperCase()}</span>
           </Button>
         </Link>
       </Card.Body>

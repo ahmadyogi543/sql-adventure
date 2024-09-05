@@ -1,59 +1,99 @@
 import { Col, Container, Row } from 'react-bootstrap';
+
 import GameplayMenuLayout from '../../layouts/GameplayMenuLayout';
+import { useGameStore } from '../../store/GameStore';
 
-import StageCard1 from '../../assets/images/stage-cards/1.png';
-import StageCard2 from '../../assets/images/stage-cards/2.png';
-import StageCard3 from '../../assets/images/stage-cards/3.png';
-import StageCard4 from '../../assets/images/stage-cards/4.png';
-import StageCard5 from '../../assets/images/stage-cards/5.png';
-import StageCard6 from '../../assets/images/stage-cards/6.png';
-import StageCard7 from '../../assets/images/stage-cards/7.png';
-import StageCard8 from '../../assets/images/stage-cards/8.png';
-import StageCard9 from '../../assets/images/stage-cards/9.png';
-import StageCard10 from '../../assets/images/stage-cards/10.png';
-
-const cards: string[] = [
-  StageCard1,
-  StageCard2,
-  StageCard3,
-  StageCard4,
-  StageCard5,
-];
-
-const cards2: string[] = [
-  StageCard6,
-  StageCard7,
-  StageCard8,
-  StageCard9,
-  StageCard10,
+const DATA: { id: number; unlock: boolean; uri: string; star: number }[] = [
+  {
+    id: 1,
+    unlock: true,
+    uri: '/images/stage-cards/1.png',
+    star: 2,
+  },
+  {
+    id: 2,
+    unlock: true,
+    uri: '/images/stage-cards/2.png',
+    star: 3,
+  },
+  {
+    id: 3,
+    unlock: true,
+    uri: '/images/stage-cards/3.png',
+    star: 2,
+  },
+  {
+    id: 4,
+    unlock: true,
+    uri: '/images/stage-cards/4.png',
+    star: 0,
+  },
+  {
+    id: 5,
+    unlock: false,
+    uri: '/images/stage-cards/unknown.png',
+    star: 0,
+  },
+  {
+    id: 6,
+    unlock: false,
+    uri: '/images/stage-cards/unknown.png',
+    star: 0,
+  },
+  {
+    id: 7,
+    unlock: false,
+    uri: '/images/stage-cards/unknown.png',
+    star: 0,
+  },
+  {
+    id: 8,
+    unlock: false,
+    uri: '/images/stage-cards/unknown.png',
+    star: 0,
+  },
+  {
+    id: 9,
+    unlock: false,
+    uri: '/images/stage-cards/unknown.png',
+    star: 0,
+  },
+  {
+    id: 10,
+    unlock: false,
+    uri: '/images/stage-cards/unknown.png',
+    star: 0,
+  },
 ];
 
 const StageMenu = () => {
+  const { play } = useGameStore();
+
   return (
     <GameplayMenuLayout>
       <Container className="p-5">
-        <Row className="mb-5 g-3">
-          {cards.map((card, index) => (
-            <Col className="flex-center" key={`gameplay-menu-item-${index}`}>
+        <Row className="g-4 gap-2">
+          {DATA.map((data) => (
+            <Col
+              className="flex-center flex-column"
+              key={`stage-menu-${data.id}`}
+              onClick={data.unlock ? play : () => {}}
+            >
               <img
-                className="d-block cursor-pointer"
-                src={card}
-                style={{ width: 160 }}
-                alt="stage-card"
+                className={`d-block rounded ${
+                  data.unlock
+                    ? 'cursor-pointer animation-shake'
+                    : 'cursor-not-allowed'
+                }`}
+                width={160}
+                src={data.uri}
+                alt=""
               />
-            </Col>
-          ))}
-        </Row>
-
-        <Row>
-          {cards2.map((card, index) => (
-            <Col className="flex-center" key={`gameplay-menu-item-${index}`}>
-              <img
-                className="d-block cursor-pointer"
-                src={card}
-                style={{ width: 160 }}
-                alt="stage-card"
-              />
+              <div className="mt-2 flex-center">
+                {Array.from({ length: data.star }, (_, k) => k + 1).map(() => (
+                  <img width={24} src="/images/stage-cards/star.png" alt="" />
+                ))}
+              </div>
             </Col>
           ))}
         </Row>

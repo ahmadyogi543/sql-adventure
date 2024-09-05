@@ -1,8 +1,9 @@
 import { FC, ReactNode } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 
 import Logo from '../assets/images/logo.png';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 type HomeLayoutProps = {
   children: ReactNode;
@@ -19,6 +20,19 @@ const HomeLayout: FC<HomeLayoutProps> = ({ children }) => {
             <p className="small m-0">
               Berkonteks Lingkungan Lahan Basah Kalimantan Selatan
             </p>
+          </div>
+          <div className="mt-4">
+            <Link to="/login">
+              <Button className="me-2" variant="secondary">
+                <small>MASUK</small>
+              </Button>
+            </Link>
+
+            <Link to="/register">
+              <Button variant="outline-secondary">
+                <small>DAFTAR</small>
+              </Button>
+            </Link>
           </div>
         </Col>
         <Col className="d-flex flex-column bg-secondary text-primary p-5">

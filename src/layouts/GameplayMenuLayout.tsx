@@ -7,7 +7,7 @@ type GameplayMenuLayoutProps = {
 
 const GameplayMenuLayout: FC<GameplayMenuLayoutProps> = ({ children }) => {
   return (
-    <div className="bg-secondary flex-grow-1">
+    <div className="bg-secondary flex-column-grow">
       <Topbar />
       <div>{children}</div>
     </div>
