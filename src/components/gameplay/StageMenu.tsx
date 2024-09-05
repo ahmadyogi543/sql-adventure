@@ -70,7 +70,7 @@ const StageMenu = () => {
   const { play } = useGameStore();
 
   return (
-    <GameplayMenuLayout>
+    <GameplayMenuLayout title="PILIH TOPIK">
       <Container className="p-5">
         <Row className="g-4 gap-2">
           {DATA.map((data) => (
