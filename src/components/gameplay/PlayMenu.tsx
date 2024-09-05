@@ -1,9 +1,12 @@
 import GameplayMenuLayout from '../../layouts/GameplayMenuLayout';
+import { useGameStore } from '../../store/GameStore';
 
 const PlayMenu = () => {
+  const { id } = useGameStore();
+
   return (
     <GameplayMenuLayout title="BERMAIN">
-      <p>Hi</p>
+      <p>You are playing {id}</p>
     </GameplayMenuLayout>
   );
 };

@@ -77,7 +77,7 @@ const StageMenu = () => {
             <Col
               className="flex-center flex-column"
               key={`stage-menu-${data.id}`}
-              onClick={data.unlock ? play : () => {}}
+              onClick={data.unlock ? () => play(data.id) : () => {}}
             >
               <img
                 className={`d-block rounded ${
