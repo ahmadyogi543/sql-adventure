@@ -2,19 +2,31 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 import GameplayMenuLayout from '../../layouts/GameplayMenuLayout';
 import { useGameMenuStore } from '../../store/GameMenuStore';
+
 import Chara from './Chara';
 import Query from './Query';
 import Output from './Output';
 
+import STAGES from '../../data/stages.json';
+import useSQLExecutor from '../../hooks/useSQLExecutor';
+
 const PlayMenu = () => {
   const { id } = useGameMenuStore();
+  const stage = STAGES.find((stage) => stage.id === id);
+  if (!stage) return null;
+
+  const { exec, run, check, validate, loading } = useSQLExecutor(
+    stage.filepath
+  );
+
+  if (loading) return null;
 
   return (
     <GameplayMenuLayout title="BERMAIN">
       <Container className="flex-column-grow" fluid>
         <Row className="flex-row-grow my-3">
           <Col className="flex-column-grow" md={6}>
-            <Chara />
+            <Chara title={stage.title} missions={stage.missions} />
           </Col>
           <Col className="flex-column-grow" md={6}>
             <Output />

@@ -24,9 +24,11 @@ type GameplayStoreState = {
   dialog: Dialog;
   setDialog: (dialog: Dialog) => void;
 
-  index: Index;
+  missionIndex: number;
   incrementMissionIndex: () => void;
   resetMissionIndex: () => void;
+
+  dialogIndex: number;
   incrementDialogIndex: () => void;
   resetDialogIndex: () => void;
 
@@ -46,22 +48,24 @@ export const useGameplayStore = create<GameplayStoreState>((set) => ({
   dialog: { query: '', type: '', validation: '' },
   setDialog: (dialog) => set(() => ({ dialog: dialog })),
 
-  index: { dialog: 0, mission: 0 },
+  missionIndex: 0,
   incrementMissionIndex: () =>
     set((state) => ({
-      index: { ...state.index, mission: state.index.mission + 1 },
+      missionIndex: state.missionIndex + 1,
     })),
   resetMissionIndex: () =>
-    set((state) => ({
-      index: { ...state.index, mission: 0 },
+    set(() => ({
+      missionIndex: 0,
     })),
+
+  dialogIndex: 0,
   incrementDialogIndex: () =>
     set((state) => ({
-      index: { ...state.index, dialog: state.index.dialog + 1 },
+      dialogIndex: state.dialogIndex + 1,
     })),
   resetDialogIndex: () =>
-    set((state) => ({
-      index: { ...state.index, dialog: 0 },
+    set(() => ({
+      dialogIndex: 0,
     })),
 
   results: [],

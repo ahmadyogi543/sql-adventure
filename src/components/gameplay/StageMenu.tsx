@@ -90,9 +90,16 @@ const StageMenu = () => {
                 alt=""
               />
               <div className="mt-2 flex-center">
-                {Array.from({ length: data.star }, (_, k) => k + 1).map(() => (
-                  <img width={24} src="/images/stage-cards/star.png" alt="" />
-                ))}
+                {Array.from({ length: data.star }, (_, k) => k + 1).map(
+                  (_, k) => (
+                    <img
+                      key={`star-card-${k}`}
+                      width={24}
+                      src="/images/stage-cards/star.png"
+                      alt=""
+                    />
+                  )
+                )}
               </div>
             </Col>
           ))}

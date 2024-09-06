@@ -12,7 +12,7 @@ type GameMenuStoreState = {
 };
 
 export const useGameMenuStore = create<GameMenuStoreState>((set) => ({
-  menu: GameMenu.PLAY,
+  menu: GameMenu.STAGE,
   id: 1,
   stage: () => set(() => ({ menu: GameMenu.STAGE })),
   play: (stageId: number) => set(() => ({ menu: GameMenu.PLAY, id: stageId })),
