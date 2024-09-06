@@ -16,7 +16,7 @@ const GameplayMenuLayout: FC<GameplayMenuLayoutProps> = ({
   const { reset } = useGameStore();
   return (
     <div className="bg-secondary flex-column-grow">
-      <div className="d-flex align-items-center justify-content-between bg-primary p-4 px-5">
+      <div className="d-flex align-items-center justify-content-between bg-primary p-3 px-5">
         <Link
           onClick={(ev) => {
             const ok = confirm('Apakah kamu yakin untuk kembali ke beranda?');
@@ -37,7 +37,7 @@ const GameplayMenuLayout: FC<GameplayMenuLayoutProps> = ({
           KEMBALI
         </Button>
       </div>
-      <div>{children}</div>
+      <div className="flex-column-grow">{children}</div>
     </div>
   );
 };
