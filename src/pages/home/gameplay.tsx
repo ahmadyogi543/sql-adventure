@@ -1,12 +1,12 @@
 import { GameMenu } from '../../constants/game-menu';
-import { useGameStore } from '../../store/GameStore';
+import { useGameMenuStore } from '../../store/GameMenuStore';
 
 import CompleteMenu from '../../components/gameplay/CompleteMenu';
 import PlayMenu from '../../components/gameplay/PlayMenu';
 import StageMenu from '../../components/gameplay/StageMenu';
 
 const HomeGameplayPage = () => {
-  const { menu } = useGameStore();
+  const { menu } = useGameMenuStore();
 
   return (
     <>

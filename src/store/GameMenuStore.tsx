@@ -11,7 +11,7 @@ type GameMenuStoreState = {
   reset: () => void;
 };
 
-export const useGameStore = create<GameMenuStoreState>((set) => ({
+export const useGameMenuStore = create<GameMenuStoreState>((set) => ({
   menu: GameMenu.PLAY,
   id: 1,
   stage: () => set(() => ({ menu: GameMenu.STAGE })),

@@ -1,7 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
 
 import GameplayMenuLayout from '../../layouts/GameplayMenuLayout';
-import { useGameStore } from '../../store/GameStore';
+import { useGameMenuStore } from '../../store/GameMenuStore';
 
 const DATA: { id: number; unlock: boolean; uri: string; star: number }[] = [
   {
@@ -67,7 +67,7 @@ const DATA: { id: number; unlock: boolean; uri: string; star: number }[] = [
 ];
 
 const StageMenu = () => {
-  const { play } = useGameStore();
+  const { play } = useGameMenuStore();
 
   return (
     <GameplayMenuLayout title="PILIH TOPIK">

@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import { Button } from 'react-bootstrap';
 import { MdHome } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import { useGameStore } from '../store/GameStore';
+import { useGameMenuStore } from '../store/GameMenuStore';
 
 type GameplayMenuLayoutProps = {
   children: ReactNode;
@@ -13,7 +13,7 @@ const GameplayMenuLayout: FC<GameplayMenuLayoutProps> = ({
   children,
   title,
 }) => {
-  const { reset } = useGameStore();
+  const { reset } = useGameMenuStore();
   return (
     <div className="bg-secondary flex-column-grow">
       <div className="d-flex align-items-center justify-content-between bg-primary p-3 px-5">

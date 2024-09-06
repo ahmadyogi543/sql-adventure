@@ -1,13 +1,13 @@
 import { Col, Container, Row } from 'react-bootstrap';
 
 import GameplayMenuLayout from '../../layouts/GameplayMenuLayout';
-import { useGameStore } from '../../store/GameStore';
+import { useGameMenuStore } from '../../store/GameMenuStore';
 import Chara from './Chara';
 import Query from './Query';
 import Output from './Output';
 
 const PlayMenu = () => {
-  const { id } = useGameStore();
+  const { id } = useGameMenuStore();
 
   return (
     <GameplayMenuLayout title="BERMAIN">
