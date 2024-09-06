@@ -13,7 +13,7 @@ type Index = {
   mission: number;
 };
 
-type Result = {
+export type Result = {
   correct: boolean;
   data: any;
   message: string;
@@ -31,7 +31,7 @@ type GameplayStoreState = {
   resetDialogIndex: () => void;
 
   results: Result[];
-  appendResult: (result: Result) => void;
+  appendResults: (result: Result) => void;
   clearResults: () => void;
 
   state: GameState;
@@ -65,7 +65,7 @@ export const useGameplayStore = create<GameplayStoreState>((set) => ({
     })),
 
   results: [],
-  appendResult: (result) =>
+  appendResults: (result) =>
     set((state) => ({ results: [...state.results, result] })),
   clearResults: () => set(() => ({ results: [] })),
 

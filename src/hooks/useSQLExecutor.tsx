@@ -1,6 +1,13 @@
 import { QueryExecResult } from 'sql.js';
 import useSQLWASM from './useSQLWASM';
 
+export type SQLExecutorResult = {
+  data: QueryExecResult | null;
+  modified: number;
+  message: string;
+  status: string;
+};
+
 export default function useSQLExecutor(filepath: string) {
   const { db, loading, error } = useSQLWASM(filepath);
 
@@ -10,12 +17,7 @@ export default function useSQLExecutor(filepath: string) {
     modified: number,
     message: string,
     status: string
-  ) => ({
-    data,
-    modified,
-    message,
-    status,
-  });
+  ): SQLExecutorResult => ({ data, modified, message, status });
 
   // WARNING: use this only for SELECT command
   // the result is array, contains the column names and values

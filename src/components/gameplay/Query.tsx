@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 
-export default function Query() {
+const Query = () => {
   const [userQuery, setUserQuery] = useState('');
+
+  function handleOnSubmit() {
+    setUserQuery('');
+  }
 
   return (
     <div className="d-flex position-relative z-index-100">
@@ -15,7 +19,12 @@ export default function Query() {
         value={userQuery}
       ></Form.Control>
       <div className="d-flex flex-column">
-        <Button className="flex-center mb-3" size="lg" variant="success">
+        <Button
+          className="flex-center mb-3"
+          onClick={handleOnSubmit}
+          size="lg"
+          variant="success"
+        >
           <small>SUBMIT</small>
         </Button>
         <Button
@@ -29,4 +38,6 @@ export default function Query() {
       </div>
     </div>
   );
-}
+};
+
+export default Query;
