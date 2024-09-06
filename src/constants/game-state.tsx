@@ -1,0 +1,7 @@
+export enum GameState {
+  START = 'START',
+  NARRATION = 'NARRATION',
+  INSTRUCTION = 'INSTRUCTION',
+  DONE = 'DONE',
+  ANSWERERD = 'ANSWERED',
+}
